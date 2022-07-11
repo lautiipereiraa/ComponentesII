@@ -1,3 +1,6 @@
+import CartWidget from "./CartWidget";
+import CarritoPNG from "./CartWidget";
+
 const ListaDesordenada = (props) => {
     console.log(props)
     return (
@@ -5,6 +8,7 @@ const ListaDesordenada = (props) => {
             <li style={{padding: 10}}><a href="#">Inicio</a></li>
             <li style={{padding: 10 }}><a href="#">Nosotros</a></li>
             <li style={{padding : 10}}><a href="https://www.instagram.com/sicko.ind/">Contacto</a></li>
+            <CartWidget/>
         </ul>
     );
     }
