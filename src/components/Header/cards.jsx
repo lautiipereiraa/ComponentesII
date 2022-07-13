@@ -1,5 +1,5 @@
 
-import Lupa from '../images/lupa.png';
+import Lupa from '../../images/lupa.png';
 
 const Cards = () => { //componente 1
   return(

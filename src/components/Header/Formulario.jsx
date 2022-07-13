@@ -1,4 +1,4 @@
-import Titulo from "./Titulo"
+import Titulo from "../../../Basura/Titulo"
 
 const Formulario = () => {
     const titulo = 'Titulo del input'

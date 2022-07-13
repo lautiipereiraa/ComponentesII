@@ -1,4 +1,4 @@
-  import SickoJPG from '../images/S.jpg';
+  import SickoJPG from '../../images/S.jpg';
 
   const LogoNav = () => { //componente 1
     return(
