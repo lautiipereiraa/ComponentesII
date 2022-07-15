@@ -18,38 +18,34 @@ function App() {
     alert(`Compraste ${valor} remeras!`);
   }
   
-
-
   return (
       
     <div 
       className="App"
       style={styleApp}
     >
-      <div> 
-      <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
-      </div>
-      <div style={{fontSize: 40, backgroundColor: 'gray', color : 'white' , marginTop : 0, padding : 0}}>
-        <LogoNav />
-        <Cards />
-        <FormS/>
-        <ItemListContainer buscar="Buscar"/>
-        <ListaDesordenada/>
-      </div>
-
       
+      <div style={{fontSize: 40, backgroundColor: 'gray', color : 'white' , marginTop : 0, padding : 0}}>
+      <LogoNav /><ListaDesordenada/>
+      <Cards />
+      <FormS/>
+      <ItemListContainer buscar="Buscar"/>
+      </div>
+      
+        
+      
+      <div style={{backgroundColor: 'yellow' , margin: 10}}>
+      <Header />
+      </div>
+        
 
-      <div className='Cards-Container' >
-
+      <div className='Cards-Container'>
       <ListCardUser />
-
       </div>
 
-      <div className='App'>
 
-          <Header />
+        <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
 
-        </div>
     </div>
 
   )

@@ -13,19 +13,19 @@ const CardUser = ({data}) => {
         component="img"
         
         image="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg"
-        alt="green iguana"
+        alt="mujer con gorro y anteojos"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.name}
+          {data.login}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {data.website}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Repositories</Button>
+        <Button size="small">About me</Button>
       </CardActions>
     </Card>
   );
