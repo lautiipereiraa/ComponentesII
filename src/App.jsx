@@ -8,6 +8,8 @@ import ItemListContainer from './components/Header/ItemListContainer'
 import ItemCount from './components/Body/ItemCount'
 import Header from './components/Body/Header'
 import ListCardUser from './components/Header/ListCardUser'
+import ItemDetailConteiner from '../src/components/Body/ItemDetailContainer'
+import {useEffect, lazy, Suspense } from 'react'
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
     <div 
       className="App"
       style={styleApp}
+      onClick={() => alert('soy el evento de app')}
     >
       
       <div style={{fontSize: 40, backgroundColor: 'gray', color : 'white' , marginTop : 0, padding : 0}}>
@@ -45,7 +48,12 @@ function App() {
 
 
         <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
-
+        
+        <div>
+          <Suspense fallback={<div>Cargando...</div>}>
+              <ItemDetailContainer />
+          </Suspense>
+        </div>
     </div>
 
   )
