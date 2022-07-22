@@ -1,12 +1,10 @@
 .App {
   text-align: center;
-  margin: 50px;
+  margin: 20px;
 }
 .Cards-Container {
   margin-right: 100px;
   display: flex;
   width: 100%;
   justify-content: center;
-  background: black;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,961) 35% , rgba(1,57,69,1) 100%);
 }

@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ItemDetail from '../Body/ItemDetail';
 
 const CardUser = ({data}) => {
   return (
@@ -12,7 +13,7 @@ const CardUser = ({data}) => {
       <CardMedia
         component="img"
         
-        image="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg"
+        image="https://www.pngplay.com/wp-content/uploads/10/Rick-And-Morty-PNG-Images-HD.png"
         alt="mujer con gorro y anteojos"
       />
       <CardContent>
@@ -22,10 +23,13 @@ const CardUser = ({data}) => {
         <Typography variant="body2" color="text.secondary">
           {data.website}
         </Typography>
+        <ItemDetail />
       </CardContent>
       <CardActions>
+        
         <Button size="small">Repositories</Button>
         <Button size="small">About me</Button>
+        
       </CardActions>
     </Card>
   );

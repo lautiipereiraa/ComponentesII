@@ -3,10 +3,8 @@ import Input from "./Input"
 const ItemDetail = () => {
     return (
     <>
-        <div>ItemDetail</div>
-        
-        <Input />
-        
+         {/* <Input /> */}
+        <div>Estos son los articulos a la venta!</div>
     </>
     )
 }
