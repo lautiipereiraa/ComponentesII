@@ -8,10 +8,9 @@ import ItemListContainer from './components/Header/ItemListContainer'
 import ItemCount from './components/Body/ItemCount'
 import Header from './components/Body/Header'
 import ListCardUser from './components/Header/ListCardUser'
-  {/* import ItemDetailConteiner from '../src/components/Body/ItemDetailContainer' */}
-import {useEffect, lazy, Suspense } from 'react' 
-import ItemDetail from './components/Body/ItemDetail'
 
+import ItemDetail from './components/Body/ItemDetail'
+import ItemDetailConteiner from './components/Body/ItemDetailContainer'
 
 function App() {
    
@@ -26,7 +25,7 @@ function App() {
     <div 
       className="App"
       style={styleApp}
-      onClick={() => alert('soy el evento de app')}
+      //onClick={() => alert('soy el evento de app')}
     >
       <div style={{fontSize: 40, color : 'white' , marginTop : 0, padding : 0}}>
       <LogoNav />
@@ -34,10 +33,11 @@ function App() {
       <Cards />
       <FormS/>
       <ItemListContainer buscar="Buscar"/>
-      <ItemDetail/>
       </div>
       
-        
+      <div>
+       <ItemDetailConteiner/> 
+      </div>
       
       <div style={{margin: 10}}>
       <Header />
@@ -60,5 +60,6 @@ function App() {
 
   )
 }
+
 
 export default App

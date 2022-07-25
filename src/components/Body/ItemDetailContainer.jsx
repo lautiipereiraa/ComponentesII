@@ -1,14 +1,17 @@
 import ItemDetail from "../Body/ItemDetail"
 import { useParams } from "react-router-dom"
+import Intercambiabilidad from "./Intercambiabilidad"
 
 const ItemDetailConteiner = () => {
 
   const { productId } = useParams()
-  //
+  
 
-  console.log(productId)
   return (
-        <ItemDetail />
+    <div>
+      <ItemDetail />
+    </div>
+        
   )
 }
 
