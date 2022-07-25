@@ -1,30 +1,14 @@
 import { useState } from "react";
 import { Link } from "@mui/material";
+import ItemDetail from "./ItemDetail";
 
-
-const InputCount = () => {
-    
-    return(
-        <>
-        <Link>
-            <button onClick={()=>console.log('Ir al inicio')}>
-                Ir al inicio o efectuar el pago</button>
-        </Link>
-        <Link>
-            <button onClick={()=>console.log('Ir al home')}>
-                Seguir comprando</button>
-        </Link>
-        </>
-    )
-}
-
-const ButtonCount = ({handleInter}) => {
-    return <button className="btn btn-outline-success" onClick={handleInter}>Agregar al carrito</button>
-}
-
+const onAdd = (valor) => {
+    console.log(`Compraste ${valor} remeras!`);
+  }
 
 const Intercambiabilidad = () => {
-    const [inputType, setInputType ] = useState = "button"
+
+    const [inputType, setInputType ] = useState (false)
 
     const handleInter = () => {
         setInputType('input')
@@ -32,13 +16,21 @@ const Intercambiabilidad = () => {
 
     return (
         <div>
-            <h2>Item Description</h2>
-
+                <ItemDetail/>
             {
-                inputType === 'button' ?
-                    <ButtonCount handleInter={handleInter} />
-                    :
-                    <InputCount />
+                inputType ?
+                <>
+                <Link>
+                    <button onClick={() => console.log('Pagó')}>
+                        Efectuar el pago</button>
+                </Link>
+                <Link>
+                <button onClick={() => console.log('Ir a las cards')}>
+                    Seguir comprando</button>
+                </Link>
+                </>
+                :
+                <button onClick={handleInter} >Agregar al carrito</button> 
             }
         </div>
     )

@@ -9,7 +9,7 @@ const ItemDetailConteiner = () => {
 
   return (
     <div>
-      <ItemDetail />
+      {/*<ItemDetail />*/}
     </div>
         
   )

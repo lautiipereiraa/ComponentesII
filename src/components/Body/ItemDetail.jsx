@@ -4,11 +4,11 @@ import ItemCount from "./ItemCount"
 
 const ItemDetail = () => {
     const onAdd = (valor) => {
-        alert(`Compraste ${valor} remeras!`);
+        console.log(`Compraste ${valor} remeras!`);
       }
     return (
     <>
-        <Input /> 
+        {/*<Input />*/} 
         <div>Estos son los articulos a la venta!</div>
         <ItemCount initial={1} stock={10} onAdd={onAdd}/>
     </>

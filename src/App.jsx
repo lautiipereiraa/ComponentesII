@@ -11,13 +11,14 @@ import ListCardUser from './components/Header/ListCardUser'
 
 import ItemDetail from './components/Body/ItemDetail'
 import ItemDetailConteiner from './components/Body/ItemDetailContainer'
+import Intercambiabilidad from './components/Body/Intercambiabilidad'
 
 function App() {
    
   const styleApp = { fontFamily: 'ubuntu', backgroundColor: 'gray'}
 
   const onAdd = (valor) => {
-    alert(`Compraste ${valor} remeras!`);
+    console.log(`Compraste ${valor} remeras!`);
   }
   
   return (
@@ -38,6 +39,9 @@ function App() {
       <div>
        <ItemDetailConteiner/> 
       </div>
+      
+        <Intercambiabilidad />
+      
       
       <div style={{margin: 10}}>
       <Header />
@@ -60,6 +64,5 @@ function App() {
 
   )
 }
-
 
 export default App

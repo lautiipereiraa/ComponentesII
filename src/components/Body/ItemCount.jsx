@@ -47,7 +47,7 @@ export const ItemCount = ({initial, stock, onAdd}) => {
         <button disabled={count >= stock} onClick={suma} style={{fontSize:10, margin : 30}}>+</button>
             
             <div>
-                <button disabled={ stock <= 0 } onClick={() => onAdd(count)}>Agregar al carro</button>
+                <button disabled={ stock <= 0 } onClick={() => onAdd(count)}>Comprar cantidad de remeras</button>
             </div>
         </div>
     )
