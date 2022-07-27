@@ -1,19 +1,12 @@
 import './App.css'
 import LogoNav from './components/Header/LogoNav'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import FormS from './components/Header/search'
-import Cards from './components/Header/cards'
-import ListaDesordenada from './components/Header/ListaDesordenada'
-import ItemListContainer from './components/Header/ItemListContainer'
-import ItemCount from './components/Body/ItemCount'
-import Header from './components/Body/Header'
-import ListCardUser from './components/Header/ListCardUser'
-
-import ItemDetail from './components/Body/ItemDetail'
+import ListCardUser from './components/Body/ListCardUser'
 import ItemDetailConteiner from './components/Body/ItemDetailContainer'
-import Intercambiabilidad from './components/Body/Intercambiabilidad'
+import HeaderPagina from './components/Header/HeaderPagina'
+import { BrowserRouter } from 'react-router-dom'
+import ImgCarrito from './components/Body/ImagenCarrito'
 
-function App() {
+export function App() {
    
   const styleApp = { fontFamily: 'ubuntu', backgroundColor: 'gray'}
 
@@ -28,39 +21,23 @@ function App() {
       style={styleApp}
       //onClick={() => alert('soy el evento de app')}
     >
-      <div style={{fontSize: 40, color : 'white' , marginTop : 0, padding : 0}}>
-      <LogoNav />
-      <ListaDesordenada/>
-      <Cards />
-      <FormS/>
-      <ItemListContainer buscar="Buscar"/>
-      </div>
-      
-      <div>
-       <ItemDetailConteiner/> 
-      </div>
-      
-        <Intercambiabilidad />
-      
-      
-      <div style={{margin: 10}}>
-      <Header />
-      </div>
-        
 
-      <div className='Cards-Container'>
-      <ListCardUser />
-      </div>
+    {/*<CartContext.Provider value={{}}>*/}
+      <BrowserRouter>
 
+        <LogoNav/>
 
-        <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
-        
-       {/*<div>
-         <Suspense fallback={<div>Cargando...</div>}> 
-              <ItemDetailContainer />
-          </Suspense>
-        </div>*/}
-    </div>
+        <HeaderPagina/>      
+
+        <ItemDetailConteiner/>
+
+        <ImgCarrito />
+
+        <ListCardUser />   
+       
+    </BrowserRouter> 
+    </div> 
+    
 
   )
 }

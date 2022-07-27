@@ -10,6 +10,7 @@ const ItemDetailConteiner = () => {
   return (
     <div>
       {/*<ItemDetail />*/}
+      <Intercambiabilidad/>
     </div>
         
   )

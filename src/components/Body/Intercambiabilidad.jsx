@@ -1,11 +1,7 @@
 import { useState } from "react";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
+
 import ItemDetail from "./ItemDetail";
-
-const onAdd = (valor) => {
-    console.log(`Compraste ${valor} remeras!`);
-  }
-
 const Intercambiabilidad = () => {
 
     const [inputType, setInputType ] = useState (false)
@@ -20,11 +16,11 @@ const Intercambiabilidad = () => {
             {
                 inputType ?
                 <>
-                <Link>
+                <Link to = '/cart'>
                     <button onClick={() => console.log('Pagó')}>
                         Efectuar el pago</button>
                 </Link>
-                <Link>
+                <Link to = '/'>
                 <button onClick={() => console.log('Ir a las cards')}>
                     Seguir comprando</button>
                 </Link>
