@@ -2,7 +2,7 @@
     // console.log( props )
 
 import { useContext } from "react"
-import { CartContext } from "../Body/context/CartContext"
+import { CartContext } from "../../context/CartContext"
 
     
     //const busqueda = (props) => {

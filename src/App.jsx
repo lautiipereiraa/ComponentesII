@@ -5,6 +5,7 @@ import ItemDetailConteiner from './components/Body/ItemDetailContainer'
 import HeaderPagina from './components/Header/HeaderPagina'
 import { BrowserRouter } from 'react-router-dom'
 import ImgCarrito from './components/Body/ImagenCarrito'
+import CartContextProvider from './context/CartContext'
 
 export function App() {
    
@@ -25,6 +26,8 @@ export function App() {
     {/*<CartContext.Provider value={{}}>*/}
       <BrowserRouter>
 
+      <CartContextProvider>
+
         <LogoNav/>
 
         <HeaderPagina/>      
@@ -33,8 +36,10 @@ export function App() {
 
         <ImgCarrito />
 
-        <ListCardUser />   
-       
+        <ListCardUser />
+        
+      </CartContextProvider>
+
     </BrowserRouter> 
     </div> 
     
